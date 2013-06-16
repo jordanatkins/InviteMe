@@ -1,0 +1,4 @@
+author: oxafemble
+main: me.oxafemble.plugins.inviteme.Inviteme
+name: InviteMe
+version: '1.0'
