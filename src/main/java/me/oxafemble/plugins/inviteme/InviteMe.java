@@ -34,8 +34,8 @@ public class InviteMe extends JavaPlugin
     String pp = path + p.getName();
     String ppa = pp + ".amount";
     int a = getConfig().getInt(ppa);
-    int ad = 5 - (a + 1);
-    int ai = 5 - a;
+    int ad = 2 - (a + 1);
+    int ai = 2 - a;
     if (cmd.getName().equalsIgnoreCase("invite")) {
                 if (args.length < 1) {
           p.sendMessage(ChatColor.RED + "Please enter a username.");
@@ -66,7 +66,7 @@ public class InviteMe extends JavaPlugin
             return true;
           }
 
-          if (a < 5)
+          if (a < 2)
           {
             if (!getServer().getOfflinePlayer(args[0]).isWhitelisted()) {
               getConfig().set(ppa, Integer.valueOf(a + 1));
@@ -82,9 +82,9 @@ public class InviteMe extends JavaPlugin
             return true;
           }
 
-          if (a >= 5)
+          if (a >= 2)
           {
-            p.sendMessage(ChatColor.RED + "You cannot invite more than 5 players");
+            p.sendMessage(ChatColor.RED + "You cannot invite more than 2 players");
 
             return true;
           }
